@@ -1,18 +1,18 @@
 @font-face {
-  font-family: "Norse";
+  font-family: 'Norse';
   src:
-    url("fonts/Norse-Bold.woff2") format("woff2"),
-    url("fonts/Norse-Bold.woff") format("woff");
+    url('fonts/Norse-Bold.woff2') format('woff2'),
+    url('fonts/Norse-Bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Norse";
+  font-family: 'Norse';
   src:
-    url("fonts/Norse.woff2") format("woff2"),
-    url("fonts/Norse.woff") format("woff");
+    url('fonts/Norse.woff2') format('woff2'),
+    url('fonts/Norse.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -26,52 +26,68 @@ body {
 
 .container {
   display: flex;
-  flex-direction: row;
-  width: 100%;
+  width: 100vh;
   height: 100vh;
 }
 
 .bg-overlay {
+  background-image: url('images/bg.avif');
+  min-width: 40%;
+  flex-shrink: 0;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logo {
+  background-color: rgba(0, 0, 0, 0.519);
+  width: 100%;
+  color: white;
+  text-align: center;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
+#title {
+  font-size: 6rem;
+  font-family: 'Norse';
+}
 
-.form-fill {
+#odin {
+  width: 7rem;
+  height: auto;
+}
+
+.background-credits {
+  position: absolute;
+  bottom: 20px;
+
+  width: 100%;
+  color: white;
+
+  font-size: clamp(0.4rem, 3vw, 1rem);
+  text-align: center;
+}
+
+.background-credits a {
+  color: white;
+}
+.row-1,
+.row-2,
+.row-3 {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  width: 100%;
 }
 
-.container > .bg-overlay {
-  display: flex;
-  flex-direction: column;
-  background-image: url("images/bg.png");
-  background-size: cover;
-  background-position: center;
-}
-
-.container > .bg-overlay > .logo {
-  display: block;
-}
-
-fieldset {
-  display: flex;
-  margin: 150px;
-  padding: 20px;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.form-area {
-  display: block;
-  width: 33%;
-}
-.text-area {
-  display: flex;
-  width: 33%;
-  margin-top: 50px;
-  padding: 50px;
-  flex-wrap: wrap;
+button {
+  width: 12rem;
+  border: none;
+  background-color: blue;
+  color: white;
+  padding: 1em 2em 1em 2em;
+  border-radius: 7px;
+  font-weight: bolder;
+  cursor: pointer;
+  margin-top: 2em;
+  margin-left: 5rem;
 }

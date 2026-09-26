@@ -33,43 +33,77 @@
       <div class="form-fill">
         <div class="text-area">
           <h1>Create your account</h1>
-          This is not a real online service!You know you eed something like this
-          in your life to help you realize your deepest dreams. Sign up now to
-          get started You know you want to.
+          <p>
+            This is not a real online service!You know you eed something like
+            this in your life to help you realize your deepest dreams.
+          </p>
+          <p><em>Sign up </em> now! to get started</p>
+          <p>You <em> know </em> you want to.</p>
         </div>
         <div class="form-area">
-          <form>
-            <fieldset>
-              <legend>Lets Do this!</legend>
+          <form method="post" action="" id="sign-up-form">
+            <h2 class="form-title">Lets Do this!</h2>
 
-              <div class="row-1">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" />
+            <div class="form-row">
+              <p class="input-container">
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" name="first-name" />
+              </p>
 
+              <p class="input-container">
                 <label for="last-name">Last Name:</label>
-                <input type="text" id="last-name" name="last" />
-              </div>
+                <input type="text" id="last-name" name="last-name" />
+              </p>
+            </div>
 
-              <div class="row-2">
-                <label for="email">Email:</label>
+            <div class="form-row">
+              <p class="input-container">
+                <label for="email">E-mail:</label>
                 <input type="email" id="email" name="email" />
+              </p>
 
-                <label for="phone_number">Phone Number:</label>
-                <input type="tel" id="phone_number" name="phone_number" />
-              </div>
+              <p class="input-container">
+                <label for="phone-number">Phone Number:</label>
+                <input
+                  type="tel"
+                  id="phone-number"
+                  name="phone-number"
+                  placeholder="+91-9XXX-XXX-XX"
+                  pattern="^(?:\+[1-9]\d{0,3}[\s-]?)?0?\d{4,13}$"
+                  title="Please enter a valid phone number!"
+                />
+              </p>
+            </div>
 
-              <div class="row-3">
-                <label for="password">Password</label>
-                <input type="text" id="password" name="password" />
+            <div class="form-row">
+              <p class="input-container">
+                <label for="pwd">Password:</label>
+                <input
+                  type="password"
+                  id="pwd"
+                  name="password"
+                  pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d#%+_]{8,}$"
+                  required
+                />
+              </p>
 
-                <label for="c-password">Confirm Password</label>
-                <input type="text" id="c-password" name="c-password" />
-              </div>
-            </fieldset>
+              <p class="input-container">
+                <label for="confirm-pwd">Confirm Password:</label>
+                <input
+                  type="password"
+                  id="confirm-pwd"
+                  name="confirm-pwd"
+                  pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d#%+_]{8,}$"
+                  required
+                />
+              </p>
+            </div>
           </form>
         </div>
-        <button type="submit">Create Account</button>
-        <p id="sign-in">Already have an account? <a href="#">Log in</a></p>
+        <div class="footer-row">
+          <button type="submit">Create Account</button>
+          <p id="sign-in">Already have an account? <a href="#">Log in</a></p>
+        </div>
       </div>
     </div>
   </body>
